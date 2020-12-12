@@ -1,0 +1,19 @@
+# chart variables template
+# - we pass an external values.yaml file in to chart to override
+
+port: service-port
+uris:
+  - /svc.v1.ProtoService/
+
+authorizationPolicy:
+  rules:
+    - paths:
+        - /svc.v1.ProtoService/ProtoMethod
+      permissions:
+        - action:svc
+      methods:
+        - HTTP Method
+
+deployment:
+  secrets:
+    - secret-name

@@ -1,0 +1,43 @@
+
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  {{- template "chart.metadata" . -}}
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - avid-gateway
+  http:
+  - name: {{ .Release.Name }}-routes
+    match:
+    {{- range .Values.uris }}
+      - uri:
+          prefix: {{ . }}
+    {{- end}}
+    route:
+    - destination:
+        host: {{ .Release.Name }}.avid.svc.cluster.local
+        subset: v1
+    retries:
+      attempts: 3
+      perTryTimeout: 2s
+    corsPolicy:
+      allowMethods:
+        - POST
+        - OPTIONS
+      allowOrigins:
+      - regex: ^http://localhost:[\d]+$
+      - regex: ^https://[\w-.]*avidaml.com$
+      allowHeaders:
+      - authorization
+      - content-type
+      - x-grpc-web
+      - grpc-timeout
+      - x-accept-response-streaming
+      - x-user-agent
+      exposeHeaders:
+      - grpc-status
+      - grpc-message
+      allowCredentials: true
+      maxAge: "24h"

@@ -1,0 +1,39 @@
+
+# Check user permissions (as claims from Auth0) before granting access to methods
+# Other services have complete access (see allow-services AuthorizationPolicy)
+apiVersion: security.istio.io/v1beta1
+kind: AuthorizationPolicy
+metadata:
+  {{- template "chart.metadata" . -}}
+spec:
+  selector:
+    matchLabels: 
+      app: {{ .Release.Name }}
+  action: ALLOW
+  rules:
+    {{- range .Values.authorizationPolicy.rules }}
+    - to:
+      - operation:
+          paths: [
+          {{- range .paths }}
+            {{ . | quote }},
+          {{- end }}
+          ]
+        {{- if .methods }}
+          methods: [
+          {{- range .methods }}
+            {{ . | quote }},
+          {{- end }}
+          ]
+        {{- end }}
+      {{- if .permissions }}
+      when:
+        - key: request.auth.claims[permissions]
+          values: [
+          {{- range .permissions }}
+            {{ . | quote }},
+          {{- end }}
+          ]
+      {{- end }}
+    {{- end }}
+  
