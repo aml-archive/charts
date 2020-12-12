@@ -1,18 +1,20 @@
 # Avid AML Helm Chart Repo
 
-## Update charts
+## Create artefacts
 
-Once a chart has been created and tested it can be packaged and added to the [Avid AML chart repo](https://avidaml.github.io/charts/):
+Once a chart has been created and tested it can be packaged and added to the [chart repo](https://avidaml.github.io/charts/).
+
+Package a chart from the project root:
 
     helm package microservice
 
-Update the chart repo index:
+Update the repo index (using the GitHub pages URL):
 
     helm repo index . --url https://avidaml.github.io/charts/
 
 ## Update repo
 
-The chart repo is hosted using GitHub Pages (based on `gh-pages` branch).
+The chart repo is hosted using GitHub Pages (on `gh-pages` branch).
 
 To upload new or updated artefacts from the previous step, switch to the `gh-pages` branch and add the artefacts.
 
