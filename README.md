@@ -8,7 +8,7 @@ Once a chart has been created and tested it can be packaged and added to the [Av
 
 Update the chart repo index:
 
-    helm repo index . --url https://github.com/avidaml/charts
+    helm repo index . --url https://avidaml.github.io/charts/
 
 ## Update repo
 
@@ -26,4 +26,4 @@ Add the remote repo to your local repo:
 
 Do a "dry run" deploy:
 
-    helm upgrade --install user microservice --repo https://avidaml.github.io/charts/ --values ./.circleci/values.yaml --dry-run
+    helm upgrade --install user microservice --repo https://avidaml.github.io/charts/ --values values.yaml --dry-run
