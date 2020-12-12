@@ -9,6 +9,6 @@ entries:
     name: microservice
     type: application
     urls:
-    - https://github.com/avidaml/charts/microservice-1.tgz
+    - https://avidaml.github.io/charts/microservice-1.tgz
     version: "1"
 generated: "2020-12-12T15:27:06.050229+13:00"
