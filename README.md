@@ -12,11 +12,18 @@ Update the chart repo index:
 
 ## Update repo
 
-Upload the artefacts (`microservice-1.tgz` and `index.yaml`) from the previous step to the `gh-pages` branch of the repo (`https://github.com/avidaml/charts`).
+The chart repo is hosted using GitHub Pages (based on `gh-pages` branch).
 
-These artefacts do not need to be committed.
+To upload new or updated artefacts from the previous step, switch to the `gh-pages` branch and add the artefacts.
+
+For example, upload `microservice-1.tgz` and `index.yaml` from the previous step.
 
 ## Using a chart
 
+Add the remote repo to your local repo:
+
     helm repo add avidaml https://avidaml.github.io/charts/
-    helm repo list
+
+Do a "dry run" deploy:
+
+    helm upgrade --install user microservice --repo https://avidaml.github.io/charts/ --values ./.circleci/values.yaml --dry-run
