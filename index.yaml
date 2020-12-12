@@ -1,14 +1,14 @@
 apiVersion: v1
 entries:
-  Microservice:
+  microservice:
   - apiVersion: v1
     appVersion: v1
-    created: "2020-12-12T15:19:02.457051+13:00"
-    description: Helm chart for deploying Avid microservices
-    digest: 2e09e4ea40b2585835046bd1063d8b3d314fc9e62e0c31707e68573a4f3d3877
-    name: Microservice
+    created: "2020-12-12T15:27:06.050741+13:00"
+    description: Deploy a proto microservice into an Istio mesh
+    digest: b80c791be864c755b81094df7ec29ac227ee649961d4da3f5f1e60e0618a66b4
+    name: microservice
     type: application
     urls:
-    - https://github.com/avidaml/charts/Microservice-1.tgz
+    - https://github.com/avidaml/charts/microservice-1.tgz
     version: "1"
-generated: "2020-12-12T15:19:02.456535+13:00"
+generated: "2020-12-12T15:27:06.050229+13:00"
