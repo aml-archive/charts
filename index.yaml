@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  Microservice:
+  - apiVersion: v1
+    appVersion: v1
+    created: "2020-12-12T15:19:02.457051+13:00"
+    description: Helm chart for deploying Avid microservices
+    digest: 2e09e4ea40b2585835046bd1063d8b3d314fc9e62e0c31707e68573a4f3d3877
+    name: Microservice
+    type: application
+    urls:
+    - https://github.com/avidaml/charts/Microservice-1.tgz
+    version: "1"
+generated: "2020-12-12T15:19:02.456535+13:00"
