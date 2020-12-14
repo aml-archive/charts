@@ -1,6 +1,12 @@
 # Avid AML Helm Chart Repo
 
-## Create artefacts
+## Test 'raw' chart
+
+From the root directory of a service:
+ 
+    helm upgrade --install SERVICE ../charts/microservice --values ./.circleci/helm-values.yaml --dry-run
+
+## Package chart
 
 Once a chart has been created and tested it can be packaged and added to the [chart repo](https://avidaml.github.io/charts/).
 
@@ -28,4 +34,4 @@ Add the remote repo to your local repo:
 
 Do a "dry run" deploy:
 
-    helm upgrade --install user microservice --repo https://avidaml.github.io/charts/ --values values.yaml --dry-run
+    helm upgrade --install SERVICE microservice --repo https://avidaml.github.io/charts/ --values values.yaml --dry-run
