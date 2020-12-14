@@ -12,7 +12,9 @@ Once a chart has been created and tested it can be packaged and added to the [ch
 
 Package a chart from the project root:
 
-    helm package microservice
+    helm package CHART_NAME
+
+e.g. `helm package service`
 
 Update the repo index (using the GitHub pages URL):
 
