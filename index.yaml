@@ -3,7 +3,7 @@ entries:
   microservice:
   - apiVersion: v1
     appVersion: v1
-    created: "2020-12-14T18:26:46.071516+13:00"
+    created: "2020-12-15T12:34:08.202994+13:00"
     description: Deploy a proto microservice into an Istio mesh
     digest: 6e24365331319c9ce68fd31a03b439ec349d9b5f0bc8e32589be6061b348e93c
     name: microservice
@@ -11,4 +11,15 @@ entries:
     urls:
     - https://avidaml.github.io/charts/microservice-1.tgz
     version: "1"
-generated: "2020-12-14T18:26:46.070601+13:00"
+  service:
+  - apiVersion: v1
+    appVersion: v1
+    created: "2020-12-15T12:34:08.205679+13:00"
+    description: Deploy a proto microservice into an Istio mesh
+    digest: d8d29c94fb42c148b37eedd5cadf9a2b0dc584285d16edd9089e52fe95dbb498
+    name: service
+    type: application
+    urls:
+    - https://avidaml.github.io/charts/service-1.tgz
+    version: "1"
+generated: "2020-12-15T12:34:08.201963+13:00"
