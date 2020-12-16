@@ -32,10 +32,9 @@ jobs:
           helm repo index . --url https://avidaml.github.io/charts/
       - name: Configure Git
         run: |
-          git config user.name "$GITHUB_ACTOR"
-          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
           git clone https://github.com/avidaml/charts/
-          cd ./charts
+          git config user.name "$GITHUB_ACTOR"
+          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"    
           git checkout gh-pages
           git add *
           git commit -m "Publish new chart"
