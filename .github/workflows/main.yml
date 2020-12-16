@@ -37,6 +37,7 @@ jobs:
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com" 
           cd ./charts   
           git checkout gh-pages
+          mkdir -p publish
           mv -f ../publish/* ./publish
           git add ./publish/*
           git commit -m "Publish new chart"
