@@ -6,11 +6,11 @@ on:
   push:
     branches: [ master ]
     paths-ignore:
-    - '**/README.MD' 
+    - 'README.md' 
   pull_request:
     branches: [ master ]
     paths-ignore:
-    - '**/README.MD'
+    - 'README.md'
   workflow_dispatch:
 
 jobs:
