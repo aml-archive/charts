@@ -34,8 +34,6 @@ jobs:
         run: |
           git clone https://github.com/avidaml/charts.git
           cd ./charts
-          export GITHUB_TOKEN=$token
-          git config --global hub.protocol https
           git config --global user.name "$GITHUB_ACTOR"
           git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com" 
           git remote set-url origin https://github.com/avidaml/charts.git
@@ -44,4 +42,4 @@ jobs:
           mv -f ../publish/* ./publish
           git add ./publish/*
           git commit -m "Publish new chart"
-          git push origin gh-pages
+          git push "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/charts.git" gh-pages
