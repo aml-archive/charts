@@ -33,9 +33,10 @@ jobs:
       - name: Configure Git
         run: |
           git clone https://github.com/avidaml/charts/
+          cd ./charts
           git config --global user.name "$GITHUB_ACTOR"
           git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com" 
-          cd ./charts   
+          git remote set-url origin https://github.com/avidaml/charts/
           git checkout gh-pages
           mkdir -p publish
           mv -f ../publish/* ./publish
