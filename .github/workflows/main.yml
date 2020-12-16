@@ -34,7 +34,8 @@ jobs:
         run: |
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
-          git clone github.com/avidaml/charts
+          git clone https://github.com/avidaml/charts/
+          cd ./charts
           git checkout gh-pages
           git add *
           git commit -m "Publish new chart"
