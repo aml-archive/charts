@@ -18,11 +18,11 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install Helm
         uses: azure/setup-helm@v1
-      - name: Package 
+      - name: Package chart
         run: |
           helm package service --destination ./publish
           helm repo index ./publish --url https://avidaml.github.io/charts/
-      - name: Configure Git
+      - name: Publish chart
         run: |
           git clone https://github.com/avidaml/charts.git
           cd ./charts
