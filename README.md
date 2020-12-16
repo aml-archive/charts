@@ -8,7 +8,7 @@ From the root directory of a service:
     
 ## Auto publish chart (Default process)
 
-Whenever a commit to `master` branch will trigger a Github action which will automatically package chart and publish it to the `gh-pages` branch.
+Whenever a commit or pull request to `master` branch (README.MD excluded) will trigger a Github action which will automatically package chart and publish it to the `gh-pages` branch.
 
 **Alternatively, you can follow the steps below to mannually publish the chart.**
 
