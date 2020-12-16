@@ -5,10 +5,12 @@ on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ master ]
+    paths-ignore:
+    - './README.MD' 
   pull_request:
     branches: [ master ]
-
-  # Allows you to run this workflow manually from the Actions tab
+    paths-ignore:
+    - './README.MD'
   workflow_dispatch:
 
 jobs:
