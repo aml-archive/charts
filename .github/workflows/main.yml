@@ -24,15 +24,17 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      - name: Install Helm
+        uses: azure/setup-helm@v1
+      - name: Package 
+        run: |
+          helm package service --destination ./
+          helm repo index . --url https://avidaml.github.io/charts/
       - name: Configure Git
         run: |
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
-      - name: Install Helm
-        uses: azure/setup-helm@v1
-      - name: Helm Chart Releaser
-        uses: helm/chart-releaser-action@v1.1.0
-        with:
-          charts_dir: ./service
-        env:
-          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          git checkout gh-pages
+          git add *
+          git commit -m "Publish new chart"
+          git push origin gh-pages
