@@ -32,11 +32,13 @@ jobs:
           helm repo index ./publish --url https://avidaml.github.io/charts/
       - name: Configure Git
         run: |
-          git clone https://github.com/avidaml/charts/
+          git clone https://github.com/avidaml/charts.git
           cd ./charts
+          export GITHUB_TOKEN=$token
+          git config --global hub.protocol https
           git config --global user.name "$GITHUB_ACTOR"
           git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com" 
-          git remote set-url origin https://github.com/avidaml/charts/
+          git remote set-url origin https://github.com/avidaml/charts.git
           git checkout gh-pages
           mkdir -p publish
           mv -f ../publish/* ./publish
