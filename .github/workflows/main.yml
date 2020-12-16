@@ -42,4 +42,4 @@ jobs:
           mv -f ../publish/* ./publish
           git add ./publish/*
           git commit -m "Publish new chart"
-          git push "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/avidaml/charts.git" gh-pages
+          git push "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/avidaml/charts.git" gh-pages
