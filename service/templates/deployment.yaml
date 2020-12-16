@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   {{- template "chart.metadata" . -}}
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: {{ .Release.Name }}
