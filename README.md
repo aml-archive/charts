@@ -5,6 +5,12 @@
 From the root directory of a service:
  
     helm upgrade --install SERVICE ../charts/microservice --values ./.circleci/helm-values.yaml --dry-run
+    
+## Auto publish chart (Default process)
+
+Whenever a commit to `master` branch will trigger a Github action which will automatically package chart and publish it to the `gh-pages` branch.
+
+**Alternatively, you can follow the steps below to mannually publish the chart.**
 
 ## Package chart
 
