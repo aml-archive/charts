@@ -42,4 +42,4 @@ Add the remote repo to your local repo:
 
 Do a "dry run" deploy:
 
-    helm upgrade --install SERVICE microservice --repo https://avidaml.github.io/charts/ --values values.yaml --dry-run
+    helm upgrade --install SERVICE service --repo https://avidaml.github.io/charts/ --values values.yaml --dry-run
