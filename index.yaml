@@ -3,7 +3,7 @@ entries:
   es-agent:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2021-01-15T10:21:38.787179+13:00"
+    created: "2021-01-15T10:30:29.16642+13:00"
     description: A Helm chart to deploy elastic-agent to Kubernetes
     digest: aacef7578aed7d6715713d40f2a3ef3f2885f1978318c74fc77edd62981a8ef9
     name: es-agent
@@ -14,7 +14,7 @@ entries:
   service:
   - apiVersion: v1
     appVersion: v1
-    created: "2021-01-14T19:54:10.106588915Z"
+    created: "2021-01-15T10:30:29.166679+13:00"
     description: Deploy a proto microservice into an Istio mesh
     digest: 6dc1a7786b16c3134078bafe55c4267192fd60ae47c8c05d027b3a9c66f24c1f
     name: service
@@ -22,4 +22,4 @@ entries:
     urls:
     - service-1.tgz
     version: "1"
-generated: "2021-01-14T19:54:10.105927905Z"
+generated: "2021-01-15T10:30:29.16527+13:00"
