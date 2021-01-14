@@ -14,12 +14,12 @@ entries:
   service:
   - apiVersion: v1
     appVersion: v1
-    created: "2021-01-15T10:21:38.787738+13:00"
+    created: "2021-01-14T19:54:10.106588915Z"
     description: Deploy a proto microservice into an Istio mesh
-    digest: 153199b36c3d44fe130b8bcbd0a7d3057d815f5c53567c797dc482c6e214136d
+    digest: 6dc1a7786b16c3134078bafe55c4267192fd60ae47c8c05d027b3a9c66f24c1f
     name: service
     type: application
     urls:
     - service-1.tgz
     version: "1"
-generated: "2021-01-15T10:21:38.785895+13:00"
+generated: "2021-01-14T19:54:10.105927905Z"
