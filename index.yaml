@@ -1,25 +1,14 @@
 apiVersion: v1
 entries:
-  es-agent:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2021-01-15T10:30:29.16642+13:00"
-    description: A Helm chart to deploy elastic-agent to Kubernetes
-    digest: aacef7578aed7d6715713d40f2a3ef3f2885f1978318c74fc77edd62981a8ef9
-    name: es-agent
-    type: application
-    urls:
-    - es-agent-0.1.0.tgz
-    version: 0.1.0
   service:
   - apiVersion: v1
     appVersion: v1
-    created: "2021-01-15T10:30:29.166679+13:00"
+    created: "2021-02-04T20:54:07.957218515Z"
     description: Deploy a proto microservice into an Istio mesh
-    digest: 6dc1a7786b16c3134078bafe55c4267192fd60ae47c8c05d027b3a9c66f24c1f
+    digest: 4d1a89970a39192f7ab824047c17946c535f945b760632f9c702505e9fd13f47
     name: service
     type: application
     urls:
-    - service-1.tgz
+    - https://avidaml.github.io/charts/service-1.tgz
     version: "1"
-generated: "2021-01-15T10:30:29.16527+13:00"
+generated: "2021-02-04T20:54:07.956763817Z"
