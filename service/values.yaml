@@ -5,6 +5,8 @@ port: service-port
 uris:
   - /svc.v1.ProtoService/
 
+timeout: 2s
+
 authorizationPolicy:
   rules:
     - paths:
