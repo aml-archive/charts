@@ -15,7 +15,7 @@ spec:
       - uri:
           prefix: {{ . }}
     {{- end}}
-    timeout: {{ .Values.timeout | default "2s" }}
+    # timeout: {{ .Values.timeout | default "2s" }}
     route:
     - destination:
         host: {{ .Release.Name }}.avid.svc.cluster.local
