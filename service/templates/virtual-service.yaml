@@ -22,7 +22,7 @@ spec:
         subset: v1
     retries:
       attempts: 3
-      perTryTimeout: 2s
+      perTryTimeout: {{ .Values.timeout | default "2s" }}
     corsPolicy:
       allowMethods:
         - POST
