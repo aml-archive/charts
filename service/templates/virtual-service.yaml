@@ -37,6 +37,7 @@ spec:
       - grpc-timeout
       - x-accept-response-streaming
       - x-user-agent
+      - regex: ^x-feature-flag-[\w|-]*$
       exposeHeaders:
       - grpc-status
       - grpc-message
