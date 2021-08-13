@@ -37,6 +37,7 @@ spec:
       - grpc-timeout
       - x-accept-response-streaming
       - x-user-agent
+      - x-feature-flag
       exposeHeaders:
       - grpc-status
       - grpc-message
