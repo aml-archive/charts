@@ -23,6 +23,11 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: {{ .Values.port }}
+          env:
+            - name: INSTANA_AGENT_HOST
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.hostIP
           envFrom:
           {{- range .Values.deployment.secrets }}
             - secretRef:
