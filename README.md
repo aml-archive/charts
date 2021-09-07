@@ -10,3 +10,4 @@ Add the remote repo to your local repo:
 Do a "dry run" deploy:
 
     helm upgrade --install SERVICE_NAME --repo https://avidaml.github.io/charts/ --values values.yaml --dry-run
+
