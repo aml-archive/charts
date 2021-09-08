@@ -14,7 +14,7 @@ Whenever a commit or pull request to `master` branch (README.md excluded) will t
 
 ## Package chart
 
-Once a chart has been created and tested it can be packaged and added to the [chart repo](https://avidaml.github.io/charts/).
+Once a chart has been created and tested it can be packaged and added to the [chart repo](https://ticcaml.github.io/charts/).
 
 Package a chart from the project root:
 
@@ -24,7 +24,7 @@ e.g. `helm package service`
 
 Update the repo index (using the GitHub pages URL):
 
-    helm repo index . --url https://avidaml.github.io/charts/
+    helm repo index . --url https://ticcaml.github.io/charts/
 
 ## Update repo
 
@@ -38,8 +38,8 @@ For example, upload `microservice-1.tgz` and `index.yaml` from the previous step
 
 Add the remote repo to your local repo:
 
-    helm repo add avidaml https://avidaml.github.io/charts/
+    helm repo add ticcaml https://ticcaml.github.io/charts/
 
 Do a "dry run" deploy:
 
-    helm upgrade --install SERVICE service --repo https://avidaml.github.io/charts/ --values values.yaml --dry-run
+    helm upgrade --install SERVICE service --repo https://ticcaml.github.io/charts/ --values values.yaml --dry-run
