@@ -1,4 +1,4 @@
-# Avid AML Helm Chart Repo
+# Ticc AML Helm Chart Repo
 
 ## Test 'raw' chart
 

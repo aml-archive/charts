@@ -7,7 +7,7 @@ spec:
   hosts:
   - "*"
   gateways:
-  - avid-gateway
+  - ticc-gateway
   http:
   - name: {{ .Release.Name }}-routes
     match:
@@ -18,7 +18,7 @@ spec:
     # timeout: {{ .Values.timeout | default "2s" }}
     route:
     - destination:
-        host: {{ .Release.Name }}.avid.svc.cluster.local
+        host: {{ .Release.Name }}.ticc.svc.cluster.local
         subset: v1
     retries:
       attempts: 3
