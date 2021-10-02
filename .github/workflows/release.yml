@@ -22,16 +22,16 @@ jobs:
       - name: Package chart
         run: |
           helm package service --destination ./publish
-          helm repo index ./publish --url https://ticcaml.github.io/charts/
+          helm repo index ./publish --url https://credibil.github.io/charts/
       - name: Publish chart
         run: |
-          git clone https://github.com/ticcaml/charts.git
+          git clone https://github.com/credibil/charts.git
           cd ./charts
           git config --global user.name "$GITHUB_ACTOR"
           git config --global user.email "$GITHUB_ACTOR@users.noreply.github.com" 
-          git remote set-url origin https://github.com/ticcaml/charts.git
+          git remote set-url origin https://github.com/credibil/charts.git
           git checkout gh-pages
           mv -f ../publish/* ./
           git add *
           git commit -m "Publish new chart"
-          git push "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/ticcaml/charts.git" gh-pages
+          git push "https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/credibil/charts.git" gh-pages

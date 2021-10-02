@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: {{ .Release.Name }}
-          image: "ghcr.io/ticcaml/{{ .Release.Name }}:latest"
+          image: "ghcr.io/credibil/{{ .Release.Name }}:latest"
           imagePullPolicy: Always
           ports:
             - containerPort: {{ .Values.port }}
